@@ -19,15 +19,17 @@ const Login = () => {
     }
   return (
     <div>
+      <center>
         <input type='email' placeholder='Email' onChange={(e) =>
                 setUser((prev) => ({ ...prev, email: e.target.value }))
-              }/>
+              }/><br/>
         <input type='password' placeholder='Password' onChange={(e) =>
                 setUser((prev) => ({ ...prev, password: e.target.value }))
-              }/>
-        <button onClick={handleLogin}>Login</button>
+              }/><br/>
+        <button onClick={handleLogin}>Login</button><br/>
         <button onClick={handleCreateAcount}>Create Account</button>
         {register && <Register/>}
+        </center>
     </div>
   )
 }

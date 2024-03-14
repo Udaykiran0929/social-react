@@ -11,33 +11,22 @@ const Register = () => {
         // setUser('')
     }
   return (
-    <div>
-      <div className="Register-model">
-        <div className="Register-model-content">
-          <div className="Register-header">
-            <div className="Register-signup-title">Register</div>
-            {/* onClick={() => setFlag(() => 0)} */}
-            <div className="close">
-              &times;
-            </div>
-          </div>
-          <input type="text" onChange={(e) =>
+    <>
+          <input type="text" placeholder="username" onChange={(e) =>
                 setUser((prev) => ({ ...prev, name: e.target.value }))
               }></input>
           <br></br>
-          <input type="email" onChange={(e) =>
+          <input type="email" placeholder="email" onChange={(e) =>
                 setUser((prev) => ({ ...prev, email: e.target.value }))
               }></input>
           <br></br>
-          <input type="password" onChange={(e) =>
+          <input type="password" placeholder="password" onChange={(e) =>
                 setUser((prev) => ({ ...prev, password: e.target.value }))
               }></input>
           <br></br>
           {/* onClick={() => setFlag((prevState) => 2)} */}
           <button onClick={handleRegister} >Register and Login</button>
-        </div>
-      </div>
-    </div>
+  </>
   );
 };
 
